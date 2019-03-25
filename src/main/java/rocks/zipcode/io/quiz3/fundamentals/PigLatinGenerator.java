@@ -10,11 +10,9 @@ public class PigLatinGenerator {
         if (index == -1)
             return word + "ay";
         if(startsWithVowel) {
-            return word.substring(index) +
-                    word.substring(0, index) + "way";
+            return word.substring(index) + word.substring(0, index) + "way";
         } else  {
-            return word.substring(index) +
-                    word.substring(0, index) + "ay";
+            return word.substring(index) + word.substring(0, index) + "ay";
         }
     }
 
@@ -22,14 +20,9 @@ public class PigLatinGenerator {
     public String translate(String str) {
         String[] words = str.split(" ");
         StringBuilder finalString = new StringBuilder();
-        int counter = words.length;
         for (String word : words) {
-            finalString.append(pigLatinSentence(word));
-            counter--;
-            if (counter > 0) {
-                finalString.append(" ");
-            }
+            finalString.append(pigLatinSentence(word)).append(" ");
         }
-        return finalString.toString();
+        return finalString.toString().substring(0, finalString.toString().length() -1);
     }
 }
