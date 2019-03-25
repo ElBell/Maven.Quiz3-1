@@ -3,14 +3,13 @@ package rocks.zipcode.io.quiz3.collections;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author leon on 10/12/2018.
  */
 public class Student {
 
-    List<Lab> labs = new ArrayList<>();
+    private List<Lab> labs;
     public Student() {
         this(new ArrayList<>());
     }

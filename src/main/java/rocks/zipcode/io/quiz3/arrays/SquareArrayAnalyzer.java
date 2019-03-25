@@ -24,7 +24,7 @@ public class SquareArrayAnalyzer {
 
     private static boolean isSqaure(Integer integer, Integer[] squaredValues) {
         for (Integer squaredValue : squaredValues) {
-            if(integer == squaredValue || integer*integer == squaredValue) {
+            if(integer.equals(squaredValue) || integer*integer == squaredValue) {
                 return true;
             }
         }
